@@ -7,17 +7,13 @@ const styles = {
   textAlign: "center"
 };
 
-class Todo extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      todo: props.todo
-    };
-  }
-  render() {
-    return <li>{this.state.todo.text}</li>;
-  }
-}
+const Todo = props => (
+  <li>
+    <input type="text" />
+    <button>delete</button>
+    <span>{this.props.text}</span>
+  </li>
+);
 
 class App extends React.Component {
   constructor() {
