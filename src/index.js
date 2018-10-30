@@ -7,6 +7,18 @@ const styles = {
   textAlign: "center"
 };
 
+class Todo extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      todo: props.todo
+    };
+  }
+  render() {
+    return <li>{this.state.todo.text}</li>;
+  }
+}
+
 class App extends React.Component {
   constructor() {
     super();
@@ -17,7 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ul />
+        <ul>{this.state.todos.map(todo => <Todo todo={todo} />)}</ul>
       </div>
     );
   }
