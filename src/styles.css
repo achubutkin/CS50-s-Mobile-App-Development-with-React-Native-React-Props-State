@@ -1,4 +1,37 @@
 .App {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+button {
+  border-radius: 10px;
+  border: 0;
+  padding: 10px 15px;
+  color: cornsilk;
+  background-color: burlywood;
+}
+
+ul > li {
+  display: block;
+  background-color: cornsilk;
+  margin: 10px 0 10px 0;
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+li input[type="checkbox"],
+li button {
+  margin-right: 10px;
 }

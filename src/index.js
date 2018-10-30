@@ -25,7 +25,14 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: []
+      todos: [
+        { id: 1, text: "Todo Text", checked: false },
+        {
+          id: 2,
+          text: "Todo Long Long Long Text Todo Long Long Long Text",
+          checked: false
+        }
+      ]
     };
   }
 
