@@ -25,14 +25,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: [
-        { id: 1, text: "Todo Text", checked: false },
-        {
-          id: 2,
-          text: "Todo Long Long Long Text Todo Long Long Long Text",
-          checked: false
-        }
-      ]
+      todos: []
     };
   }
 
@@ -65,6 +58,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div>Todo count: {this.state.todos.length}</div>
+        <div>
+          Unchecked todos:{" "}
+          {this.state.todos.filter(todo => !todo.checked).length}
+        </div>
         <button onClick={() => this.addTodo()}>Add TODO</button>
         <ul>
           {this.state.todos.map(todo => (
