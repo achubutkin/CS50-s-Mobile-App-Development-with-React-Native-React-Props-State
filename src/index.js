@@ -7,6 +7,8 @@ const styles = {
   textAlign: "center"
 };
 
+let id = 0;
+
 const Todo = props => (
   <li>
     <input type="checkbox" />
@@ -27,7 +29,7 @@ class App extends React.Component {
     let text = prompt("Please, write Todo: ");
     if (text) {
       this.setState({
-        todos: [...this.state.todos, { text: text }]
+        todos: [...this.state.todos, { id: id++, text: text }]
       });
     }
   }
