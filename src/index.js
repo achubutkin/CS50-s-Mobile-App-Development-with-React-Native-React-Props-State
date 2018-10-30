@@ -47,12 +47,10 @@ class App extends React.Component {
   toggleTodo(id) {
     this.setState({
       todos: this.state.todos.map(todo => {
-        if (todo.id !== id) return todo;
-        return {
-          id: todo.id,
-          text: todo.text,
-          checked: !todo.checked
-        };
+        if (todo.id === id) {
+          todo.checked = !todo.checked;
+        }
+        return todo;
       })
     });
   }
