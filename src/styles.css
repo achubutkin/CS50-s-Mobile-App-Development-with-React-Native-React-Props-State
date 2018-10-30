@@ -20,6 +20,11 @@ button {
   background-color: burlywood;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 ul > li {
   display: block;
   background-color: cornsilk;
